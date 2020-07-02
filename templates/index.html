@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction</title>
+</head>
+
+<body>
+
+    <div style="color:rgb(0, 0, 0)">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2 style="color:red">CAR PRICE PREDICTION</h2>
+            <h3 style="color:rgb(33, 5, 99)">An ML Model predicting price of car</h3>
+            <h4>No:of years car is old</h4>
+            <input id="first" name="Year" type="number ">
+            <h4>Showroom Price(In lakhs)</h4><input id="second" name="Present_Price" required="required">
+            <h4>Kilometers Drived</h4><input id="third" name="Kms_Driven" required="required">
+            <h4>No:of past owners of the car(0 or 1 or 3)</h4><input id="fourth" name="Owner" required="required">
+            <h4>Fuel type</h4><select name="Fuel_Type_Petrol" id="fuel" required="required">
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Diesel">CNG</option>
+            </select>
+            <h4>Dealer or Individual</h4><select name="Seller_Type_Individual" id="owner" required="required">
+                <option value="Dealer">Dealer</option>
+                <option value="Individual">Individual</option>
+            </select>
+            <h4>Transmission type</h4><select name="Transmission_Mannual" id="type" required="required">
+                <option value="Mannual">Manual Car</option>
+                <option value="Automatic">Automatic Car</option>
+            </select>
+            <br><br><button id="sub" type="submit ">Calculate the Selling Price</button>
+            <br><br><h3>{{ prediction_text }}<h3></h3>
+
+            <h5>Built with ❤️ by Vijayalaxmi Hubli</h5>
+            <a href="https://github.com/VijayalaxmiH18"><i class="fa fa-github" style="font-size:24px;color:black"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.linkedin.com/in/vijayalaxmi-hubli-68b773198/"><i class="fa fa-linkedin-square" style="font-size:24px;color:black"></i></a>
+
+
+            
+        </form>
+
+
+
+        
+    </div>
+
+
+
+
+    <style>
+        body {
+            background-color: rgb(219, 216, 216);
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #type {
+            width: 130px;
+            height: 30px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+        
+        #box {
+            border-radius: 40px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+            font-size: medium;
+            position: absolute;
+            width: 800px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #fuel {
+            width: 130px;
+            height: 30px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+        
+        #fuel:hover {
+            background-color: rgb(255, 255, 255);
+        }
+        
+        #research {
+            width: 130px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #type:hover {
+            background-color: rgb(255, 255, 255);
+        }
+        
+        #owner {
+            width: 130px;
+            height: 30px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+        
+        #owner:hover {
+            background-color: rgb(255, 255, 255);
+        }
+        
+        #sub {
+            width: 250px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: rgb(7, 224, 18);
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #fourth {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+</body>
+
+</html>
