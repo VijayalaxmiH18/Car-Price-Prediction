@@ -1,6 +1,6 @@
 # Car-Price-Prediction
 
-ML ALGORITHM APPLIED : Random Forest Regressor 
+### ML ALGORITHM APPLIED : Random Forest Regressor 
 
 ![carpred1](https://user-images.githubusercontent.com/64924874/86338247-b73f6b80-bc6f-11ea-848f-aca86b82e2ce.png)
 
